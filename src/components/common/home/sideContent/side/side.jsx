@@ -3,9 +3,26 @@ import Heading from "../../../heading/heading";
 import SocialMedia from "../social/socialMedia";
 import "./side.css";
 import Tpost from "../tpost/tpost";
+import { gallery } from "../../../../../dummydata";
+import Slider from "react-slick";
 
 const Side = () => {
-  const category = ["world", "travel", "sport", "fun", "health", "fashion", "business"];
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+  const category = [
+    "world",
+    "travel",
+    "sport",
+    "fun",
+    "health",
+    "fashion",
+    "business",
+  ];
   return (
     <>
       <Heading title="Stay Connected" />
@@ -25,7 +42,7 @@ const Side = () => {
         <img src="./images/sidebar-banner-new.jpg" alt="" />
       </section>
 
-      <Tpost /> 
+      <Tpost />
 
       <section className="category">
         <Heading title="category" />
@@ -34,13 +51,24 @@ const Side = () => {
             <div className="category category1">
               <span>{val}</span>
             </div>
-          )
+          );
         })}
+      </section>
+
+      <section className="gallery">
+        <Heading title="Gallery" />
+        <Slider {...settings}>
+          {gallery.map((val) => {
+            return (
+              <div className="img">
+                <img src={val.cover} alt="" />
+              </div>
+            );
+          })}
+        </Slider>
       </section>
     </>
   );
-
- 
 };
 
 export default Side;
