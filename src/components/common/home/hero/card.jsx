@@ -1,15 +1,20 @@
-import React from 'react'
+import React from "react";
+import {Link} from "react-router-dom"
 
-const Card = ({item: {id, cover, category, title, authorName, authorImg, time}}) => {
+const Card = ({
+  item: { id, cover, category, title, authorName, authorImg, time },
+}) => {
   return (
     <>
       <div className="box">
         <div className="img">
-          <img src={cover} alt='' />
+          <img src={cover} alt="" />
         </div>
-        <div className='text'>
-          <span className='category'>{category}</span>
-          <h1 className="titleBg">{title}</h1>
+        <div className="text">
+          <span className="category">{category}</span>
+          <Link to={`/singlepage/${id}`}>
+            <h1 className="titleBg">{title}</h1>
+          </Link>
           <div className="author flex">
             <span>by {authorName}</span>
             <span>{time}</span>
@@ -17,7 +22,7 @@ const Card = ({item: {id, cover, category, title, authorName, authorImg, time}})
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
