@@ -15,7 +15,6 @@ const App = () => {
       <Router>
         <Header />
         <div>
-
           <Switch>
             <Route path="/" component={Homepages} />
           </Switch>

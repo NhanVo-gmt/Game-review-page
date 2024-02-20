@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css'
+import Popular from '../popular/popular'
 
 const Home = () => {
   return (
@@ -7,7 +8,7 @@ const Home = () => {
         <main>
             <div className="container">
                 <section className="mainContent">
-
+                  <Popular />
                 </section>
                 <section className="sideContent"></section>
             </div>

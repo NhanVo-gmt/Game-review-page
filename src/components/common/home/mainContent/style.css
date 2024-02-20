@@ -5,11 +5,9 @@ main .container {
 }
 .mainContent {
     width: 75%;
-    background-color: cadetblue;
 }
 .sideContent {
     width: 23%;
-    background: rebeccapurple;
 }
 @media screen and (max-width: 768px) {
     main .container{
