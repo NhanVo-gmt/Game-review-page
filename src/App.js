@@ -7,6 +7,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Homepages from './components/common/home/homepage';
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
         <div>
 
           <Switch>
-            {/* <Route path="/" component={Homepages} /> */}
+            <Route path="/" component={Homepages} />
           </Switch>
         </div>
       </Router>
